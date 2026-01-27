@@ -13,8 +13,9 @@ function getEndDate(date, month){
 
 function solution(today, terms, privacies) {
     const answer = privacies.map((item,i)=>{
-        const date = new Date(item.split(" ")[0])
-        const type = item.split(" ")[1]
+        const [d, type] = item.split(" ");
+    
+        const date = new Date(d);
         const m = getTermMonth(terms, type)
      
         if(new Date(today) < getEndDate(date,m)) return null
