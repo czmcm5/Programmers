@@ -1,0 +1,5 @@
+-- 코드를 입력하세요
+-- 헐 날짜 포멧 똑같이 나와야함 ㅋㅋㅋ 2017-03-01
+SELECT DR_NAME, DR_ID, MCDP_CD, DATE_FORMAT(HIRE_YMD,'%Y-%m-%d') FROM DOCTOR
+WHERE MCDP_CD IN ('CS', 'GS')
+ORDER BY HIRE_YMD DESC, DR_NAME ASC
