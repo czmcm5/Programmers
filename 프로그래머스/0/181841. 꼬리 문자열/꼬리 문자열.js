@@ -1,9 +1,7 @@
 function solution(str_list, ex) {
-  var answer = "";
-
-  str_list.map((item) => {
-    if (!item.includes(ex)) answer += item;
-  });
+  const answer = str_list.reduce((acc, item) =>
+    item.includes(ex) ? acc : acc + item,''
+  );
 
   return answer;
 }
