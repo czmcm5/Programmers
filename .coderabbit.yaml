@@ -12,3 +12,8 @@ reviews:
       - study
 
 language: ko
+
+path_filters:
+  - "**/*.js"
+  - "!README.md"
+  - "!.coderabbit.yaml"
