@@ -1,16 +1,13 @@
 function solution(arr) { 
-    let data = arr.map((v, i) => (v === 2 ?  i  : null))
-    .filter((v) => v !== null);    
-    let data_length = data.length;
-        
-    switch(data_length) {
-        case 0:
-            return [-1];
-        case 1:
-            return [2] 
-        default:
-             return arr.filter((v,i) =>(
-             i >= data[0] && i <= data[data_length-1]
-            ))
+   const firstIdx = arr.indexOf(2);
+   const lastIdx = arr.lastIndexOf(2);
+    
+    if(firstIdx === -1){
+        return [-1]
     }
+    if(firstIdx===lastIdx){
+        return [2]
+    }
+
+ return arr.filter((v,i) =>(i >= firstIdx && i <= lastIdx))
 }
