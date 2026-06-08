@@ -17,3 +17,12 @@ path_filters:
   - "**/*.js"
   - "!README.md"
   - "!.coderabbit.yaml"
+  
+path_instructions:
+  - path: "**/*.js"
+    instructions: |
+      JavaScript 코드만 리뷰하세요.
+
+  - path: "**/*.md"
+    instructions: |
+      리뷰하지 마세요.
