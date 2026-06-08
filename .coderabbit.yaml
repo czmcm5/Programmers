@@ -9,6 +9,6 @@ reviews:
     drafts: false
     base_branches:
       - main
-      - develop
+      - study
 
 language: ko
