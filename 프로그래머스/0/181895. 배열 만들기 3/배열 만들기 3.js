@@ -1,9 +1,9 @@
 function solution(arr, intervals) {
-    let interval1 = intervals[0]
-    let interval2 = intervals[1]
-    
-    let arr1 = arr.filter((_,i) => i >= interval1[0] && i <=interval1[1])
-    let arr2 = arr.filter((_,i) => i >= interval2[0] && i <=interval2[1])
+   const [[a1, b1], [a2, b2]] = intervals;
+
         
-    return [... arr1, ...arr2];
+    return [
+        ... arr.slice(a1, b1+1),
+        ... arr.slice(a2, b2+1)
+           ];
 }
