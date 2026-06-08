@@ -1,13 +1,8 @@
 function solution(arr, query) {  
-    let result = arr;
+  return query.reduce((r,v,i)=> 
+        i % 2 === 0
+            ? r.slice(0, v+1)
+            : r.slice(v)
+    , arr)
     
-    const answer = query.map((v,i)=> {
-        let update = result
-        if(i % 2 === 0){
-           result = update.filter((_,i)=> i <= v)
-        } else {
-            result = update.filter((_,i)=> i >= v)
-        }
-    })
-    return result;
 }
