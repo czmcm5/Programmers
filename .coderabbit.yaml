@@ -21,7 +21,7 @@ path_filters:
 path_instructions:
   - path: "**/*.js"
     instructions: |
-      JavaScript 코드만 리뷰하세요.
+      해당 파일의 로직들을 필수로 점검하고 개션점을 알려주세요.
 
   - path: "**/*.md"
     instructions: |
