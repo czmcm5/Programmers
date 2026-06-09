@@ -1,14 +1,14 @@
 function solution(str_list) {
-    const l_idx = str_list.indexOf('l');
-    const r_idx = str_list.indexOf('r');
+    const l = str_list.indexOf('l');
+    const r = str_list.indexOf('r');
     
-    const hasL = l_idx !== -1
-    const hasR =  r_idx !== -1
+    const hasL = l !== -1
+    const hasR =  r !== -1
     
     if(!hasL && !hasR) return []
-    if(hasL && !hasR) return str_list.slice(0, l_idx)
-    if(!hasL && hasR) return str_list.slice(r_idx+1)
-    if(l_idx < r_idx) return str_list.slice(0, l_idx)
+    if(hasL && !hasR) return str_list.slice(0, l)
+    if(!hasL && hasR) return str_list.slice(r+1)
+    if(l < r) return str_list.slice(0, l)
     
-    return str_list.slice(r_idx+1)
+    return str_list.slice(r+1)
 }
